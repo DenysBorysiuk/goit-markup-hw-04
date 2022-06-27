@@ -332,6 +332,10 @@ body {
   padding-bottom: 60px;
 }
 
+.footer > .container {
+  display: flex;
+}
+
 .footer-logo-text {
   color: var(--main-light);
 }
@@ -353,6 +357,37 @@ body {
 
 .footer-item:nth-child(-n + 2) {
   margin-bottom: 9px;
+}
+
+.footer-social {
+  margin-left: 70px;
+}
+
+.footer-social-subtitle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-light);
+
+  margin-bottom: 20px;
+}
+
+.footer-social-list {
+  display: flex;
+}
+
+.footer-social-item::before {
+  content: '';
+  width: 44px;
+  height: 44px;
+  /* background: rgba(255, 255, 255, 0.1); */
+  background-color: #fff;
+  background-image: url(/images/footer/linkedin.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
 }
 
 /* portfolio page */
