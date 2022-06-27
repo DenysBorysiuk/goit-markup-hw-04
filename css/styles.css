@@ -11,6 +11,8 @@
   --main-bg-color: #e5e5e5;
   --dark-bg-color: #2f303a;
   --light-bg-color: #f5f4fa;
+  --icon-bg-color: rgba(255, 255, 255, 0.1);
+
   --logo-color: #000;
   --hero-btn: #188ce8;
 
@@ -237,33 +239,10 @@ body {
   justify-content: space-between;
 }
 
-.advantages-item::before {
-  content: '';
-  height: 120px;
-  background-size: 70px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #f5f4fa;
-  border-radius: 4px;
-
-  display: block;
+.advanteges-item-img {
+  background-color: var(--light-bg-color);
+  padding: 25px 100px;
   margin-bottom: 30px;
-}
-
-.advantages-item:nth-child(1)::before {
-  background-image: url(../images/advantages/antenna.svg);
-}
-
-.advantages-item:nth-child(2)::before {
-  background-image: url(../images/advantages/clock.svg);
-}
-
-.advantages-item:nth-child(3)::before {
-  background-image: url(../images/advantages/diagram.svg);
-}
-
-.advantages-item:nth-child(4)::before {
-  background-image: url(../images/advantages/astronaut.svg);
 }
 
 .advantages-title {
@@ -322,6 +301,33 @@ body {
   line-height: 1.89;
   color: var(--secondary-font-color);
   text-align: center;
+  padding-bottom: 16px;
+}
+
+.team-icon-list {
+  display: flex;
+}
+
+/* .team-icon-item + .team-icon-item {
+  margin-left: 10px;
+} */
+
+.team-icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: #afb1b8;
+}
+.team-icon-link > .icon {
+  fill: currentColor;
+}
+
+.team-icon-link:hover {
+  background-color: var(--acent-color);
+  color: var(--main-light);
 }
 
 /* footer */
@@ -378,16 +384,41 @@ body {
   display: flex;
 }
 
-.footer-social-item::before {
+.footer-social-item {
   content: '';
+  display: block;
   width: 44px;
   height: 44px;
-  /* background: rgba(255, 255, 255, 0.1); */
-  background-color: #fff;
-  background-image: url(/images/footer/linkedin.svg);
+  background-size: 20px;
+  background-color: var(--icon-bg-color);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 20px;
+  border-radius: 50%;
+}
+
+.footer-social-item:hover,
+.footer-social-item:focus {
+  background-color: var(--acent-color);
+}
+
+.footer-social-item + .footer-social-item {
+  margin-left: 10px;
+}
+
+.footer-social-item:nth-child(1) {
+  background-image: url(../images/icon/instagram.svg);
+}
+
+.footer-social-item:nth-child(2) {
+  background-image: url(../images/icon/twitter.svg);
+}
+
+.footer-social-item:nth-child(3) {
+  background-image: url(../images/icon/facebook.svg);
+}
+
+.footer-social-item:nth-child(4) {
+  background-image: url(../images/icon/linkedin.svg);
 }
 
 /* portfolio page */
