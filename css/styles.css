@@ -178,13 +178,19 @@ body {
 .hero {
   text-align: center;
   background: #2f303a;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/bg.jpg);
-  background-position: center;
-  background-size: cover;
 
   padding-top: 200px;
   padding-bottom: 200px;
+}
+
+.overlay {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hero-title {
@@ -229,6 +235,35 @@ body {
 .advantages-list {
   display: flex;
   justify-content: space-between;
+}
+
+.advantages-item::before {
+  content: '';
+  height: 120px;
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+
+  display: block;
+  margin-bottom: 30px;
+}
+
+.advantages-item:nth-child(1)::before {
+  background-image: url(../images/advantages/antenna.svg);
+}
+
+.advantages-item:nth-child(2)::before {
+  background-image: url(../images/advantages/clock.svg);
+}
+
+.advantages-item:nth-child(3)::before {
+  background-image: url(../images/advantages/diagram.svg);
+}
+
+.advantages-item:nth-child(4)::before {
+  background-image: url(../images/advantages/astronaut.svg);
 }
 
 .advantages-title {
