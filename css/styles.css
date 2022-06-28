@@ -172,13 +172,22 @@ body {
 }
 
 .header-contacts-item {
-  color: #757575;
+  display: flex;
+  color: var(--secondary-font-color);
 }
 
 .header-contacts-item + .header-contacts-item {
   margin-left: 30px;
 }
 
+.header-contacts-link {
+  display: flex;
+  align-items: center;
+}
+
+.header-contacts-desc {
+  margin-left: 10px;
+}
 /* hero */
 
 .hero {
