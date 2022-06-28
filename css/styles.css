@@ -359,8 +359,8 @@ body {
 }
 
 .clients-link:hover {
-  color: var(--main-light);
-  background-color: var(--acent-color);
+  color: var(--acent-color);
+  border-color: var(--acent-color);
 }
 
 /* footer */
